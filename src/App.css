@@ -43,7 +43,7 @@ html {
 	--rock-gradient: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
 	--lizard-gradient: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
 	--cyan: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
-	--backgroundColor: linear-gradient(180deg, hsl(214, 46%, 28%), hsl(237, 49%, 15%));
+	--backgroundColor: linear-gradient(180deg, hsl(214, 45%, 31%), hsl(240, 47%, 21%));
 	--dark-text: hsl(229, 25%, 31%);
 	--score-text: hsl(229, 64%, 46%);
 	--header-outline: hsl(217, 16%, 45%);
@@ -158,4 +158,82 @@ h1 {
 	font-size: 5rem;
 	margin: 0;
 	color: var(--dark-text);
+}
+
+/*
+===============
+Header
+===============
+*/
+
+.play {
+	display: flex;
+	justify-content: center;
+}
+
+.play-container {
+	position: relative;
+	width: 70%;
+	height: 60vh;
+}
+
+.pentagon {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 40%;
+}
+
+.choice {
+	position: absolute;
+	display: flex;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.choice img {
+	padding: 2.2rem;
+	min-width: 100%;
+	min-height: 100%;
+	background: var(--white);
+}
+
+.scissors {
+	margin-left: auto;
+	margin-right: auto;
+	top: 10%;
+	right: 0;
+	left: 0;
+	border: solid 15px hsl(39, 89%, 49%);
+}
+
+.paper {
+	border: solid 15px hsl(230, 89%, 62%);
+	right: 22%;
+	top: 33%;
+}
+
+.rock {
+	border: solid 15px hsl(349, 71%, 52%);
+	left: 22%;
+	top: 33%;
+}
+
+.spock {
+	border: solid 15px hsl(189, 59%, 53%);
+	bottom: 12%;
+	left: 30%;
+}
+
+.lizard {
+	border: solid 15px hsl(261, 73%, 60%);
+	bottom: 12%;
+	right: 30%;
 }
