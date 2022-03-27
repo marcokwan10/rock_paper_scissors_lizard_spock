@@ -4,8 +4,7 @@
 	box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;600;700&display=swap");
 html {
 	font-size: 100%;
 } /*16px*/
@@ -151,7 +150,7 @@ Header
 	font-size: 1.75rem;
 	color: var(--score-text);
 	margin: 0;
-	font-weight: 100;
+	font-weight: 300;
 	letter-spacing: var(--letter-spacing);
 }
 
