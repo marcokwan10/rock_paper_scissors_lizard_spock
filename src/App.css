@@ -184,14 +184,14 @@ Play
 	right: 0;
 	top: 0;
 	bottom: 0;
-	width: 40%;
+	width: 50%;
 }
 
 .choice {
 	position: absolute;
 	display: flex;
-	width: 160px;
-	height: 160px;
+	width: 170px;
+	height: 170px;
 	border-radius: 50%;
 	justify-content: center;
 	align-items: center;
@@ -208,7 +208,7 @@ Play
 .scissors {
 	margin-left: auto;
 	margin-right: auto;
-	top: 10%;
+	top: 7%;
 	right: 0;
 	left: 0;
 	border: solid 15px hsl(39, 89%, 49%);
@@ -216,26 +216,26 @@ Play
 
 .paper {
 	border: solid 15px hsl(230, 89%, 62%);
-	right: 22%;
+	right: 18%;
 	top: 33%;
 }
 
 .rock {
 	border: solid 15px hsl(349, 71%, 52%);
-	left: 22%;
+	left: 18%;
 	top: 33%;
 }
 
 .spock {
 	border: solid 15px hsl(189, 59%, 53%);
-	bottom: 12%;
-	left: 30%;
+	bottom: 8%;
+	left: 28%;
 }
 
 .lizard {
 	border: solid 15px hsl(261, 73%, 60%);
-	bottom: 12%;
-	right: 30%;
+	bottom: 8%;
+	right: 28%;
 }
 
 /*
@@ -264,15 +264,16 @@ Result
 
 .pick-container p {
 	color: var(--white);
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 	font-weight: 600;
 	margin-bottom: 3rem;
+	letter-spacing: var(--letter-spacing);
 }
 
 .picked {
 	display: flex;
-	width: 300px;
-	height: 300px;
+	width: 320px;
+	height: 320px;
 	border-radius: 50%;
 	justify-content: center;
 	align-items: center;
