@@ -68,7 +68,7 @@ html {
 body {
 	background: var(--backgroundColor);
 	height: 100vh;
-	width: 1366px;
+	max-width: 1366px;
 	margin: 0 auto;
 	font-family: var(--font);
 	padding: 2rem;
@@ -127,7 +127,7 @@ Header
 }
 
 .header-container img {
-	width: 20%;
+	width: 160px;
 	display: block;
 	object-fit: contain;
 	padding: 1rem;
@@ -162,7 +162,7 @@ h1 {
 
 /*
 ===============
-Header
+Play
 ===============
 */
 
@@ -236,4 +236,53 @@ Header
 	border: solid 15px hsl(261, 73%, 60%);
 	bottom: 12%;
 	right: 30%;
+}
+
+/*
+===============
+Result
+===============
+*/
+.result {
+	display: flex;
+	justify-content: center;
+}
+
+.result-container {
+	display: flex;
+	width: 70%;
+	height: 60vh;
+	justify-content: center;
+}
+
+.pick-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 3rem;
+}
+
+.pick-container p {
+	color: var(--white);
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 3rem;
+}
+
+.picked {
+	display: flex;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	border-width: 35px;
+}
+
+.picked img {
+	padding: 3rem;
+	min-width: 100%;
+	min-height: 100%;
+	background: var(--white);
 }
