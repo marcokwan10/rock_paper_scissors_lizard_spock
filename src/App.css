@@ -11,32 +11,8 @@ html {
 
 :root {
 	/* color */
-	--primary100: #ccdad9;
-	--primary200: #99b5b4;
-	--primary300: #66908e;
-	--primary400: #336b69;
-	--primary500: #004643;
-	--primary600: #003836;
-	--primary700: #003836;
-	--primary800: #001c1b;
-	--primary900: #000e0d;
-
-	--grey100: #f1f5f9;
-	--grey200: #e2e8f0;
-	--grey300: #cbd5e1;
-	--grey400: #94a3b8;
-	--grey500: #64748b;
-	--grey600: #475569;
-	--grey700: #334155;
-	--grey800: #1e293b;
-	--grey900: #0f172a;
-
 	--black: #222;
 	--white: #fff;
-	--red-light: #f8d7da;
-	--red-dark: #842029;
-	--green-light: #d1e7dd;
-	--green-dark: #0f5132;
 
 	--scissors-gradient: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 	--paper-gradient: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
@@ -50,61 +26,20 @@ html {
 
 	/* fonts */
 	--font: "Barlow Semi Condensed", sans-serif;
-	--smallText: 0.875em;
 
 	--borderRadius: 10px;
 	--letter-spacing: 2px;
-	--transition: 0.3s ease-in-out all;
-	--max-width: 1120px;
-	--fixed-width: 600px;
-
-	/* box shadow */
-	--shadow-1: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-	--shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-	--shadow-3: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-	--shadow-4: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+	--transition: 2s ease-in-out all;
+	--max-width: 1366px;
 }
 
 body {
 	background: var(--backgroundColor);
-	height: 100vh;
-	max-width: 1366px;
+	height: 110vh;
+	max-width: var(--max-width);
 	margin: 0 auto;
 	font-family: var(--font);
-	padding: 2rem;
-}
-
-.btn {
-	cursor: pointer;
-	color: var(--white);
-	background: var(--primary500);
-	border: transparent;
-	border-radius: var(--borderRadius);
-	letter-spacing: var(--letter-spacing);
-	padding: 0.375rem 0.75rem;
-	box-shadow: var(--shadow-1);
-	transition: var(--transition);
-	text-transform: capitalize;
-	display: inline-block;
-}
-
-.btn:hover {
-	background: var(--primary700);
-	box-shadow: var(--shadow-4);
-}
-
-.btn-hipster {
-	color: var(--primary500);
-	background: var(--primary200);
-}
-
-.btn-hipster:hover {
-	color: var(--primary100);
-	background: var(--primary700);
-}
-
-.btn-block {
-	width: 100%;
+	padding: 1rem;
 }
 
 /*
@@ -160,6 +95,20 @@ h1 {
 	color: var(--dark-text);
 }
 
+@media screen and (max-width: 768px) {
+	.header-container {
+		width: 95%;
+	}
+
+	.header-container img {
+		padding: 0;
+	}
+
+	.score {
+		width: 170px;
+	}
+}
+
 /*
 ===============
 Play
@@ -169,12 +118,14 @@ Play
 .play {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 
 .play-container {
 	position: relative;
 	width: 70%;
-	height: 60vh;
+	height: 700px;
 }
 
 .pentagon {
@@ -238,6 +189,74 @@ Play
 	right: 28%;
 }
 
+.rules {
+	margin-top: 2rem;
+	margin-right: 13rem;
+	font-size: 1.5rem;
+	color: var(--white);
+	border-radius: var(--borderRadius);
+	border: solid 2px var(--white);
+	width: 130px;
+	text-align: center;
+	letter-spacing: var(--letter-spacing);
+	font-weight: 600;
+	line-height: 0;
+	align-self: flex-end;
+}
+
+@media screen and (max-width: 390px) {
+	.play-container {
+		position: relative;
+		width: 98%;
+		height: 400px;
+	}
+
+	.pentagon {
+		margin: 90px auto;
+		width: 80%;
+	}
+
+	.choice {
+		width: 110px;
+		height: 110px;
+	}
+
+	.choice img {
+		min-width: 105px;
+	}
+
+	.scissors {
+		top: 50px;
+	}
+
+	.paper {
+		right: 0;
+		top: 160px;
+	}
+
+	.rock {
+		left: 0;
+		top: 160px;
+	}
+
+	.spock {
+		bottom: -15px;
+		left: 50px;
+	}
+
+	.lizard {
+		bottom: -15px;
+		right: 50px;
+	}
+
+	.rules {
+		font-size: 1.25rem;
+		align-self: center;
+		margin: 0;
+		margin-top: 70px;
+	}
+}
+
 /*
 ===============
 Result
@@ -251,7 +270,7 @@ Result
 .result-container {
 	display: flex;
 	width: 70%;
-	height: 60vh;
+	height: 700px;
 	justify-content: center;
 }
 
@@ -286,4 +305,28 @@ Result
 	min-width: 100%;
 	min-height: 100%;
 	background: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+	.pick-container {
+		margin: 2rem;
+	}
+
+	.pick-container p {
+		text-align: center;
+		vertical-align: middle;
+		height: 100px;
+	}
+
+	.picked {
+		width: 100px;
+		height: 100px;
+		border-width: 12px;
+	}
+
+	.picked img {
+		min-width: 130px;
+		min-height: 130px;
+		background: var(--white);
+	}
 }

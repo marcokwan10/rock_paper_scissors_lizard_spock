@@ -1,13 +1,13 @@
 import React from "react";
 
-function Result() {
+function Result({ playerChoice }) {
 	return (
 		<div className="result">
 			<div className="result-container">
 				<div className="pick-container">
 					<p>YOU PICKED</p>
-					<div className="picked scissors">
-						<img src="/images/icon-scissors.svg" alt="scissors" />
+					<div className={`picked ${playerChoice}`}>
+						<img src={`/images/icon-${playerChoice}.svg`} alt={playerChoice} />
 					</div>
 				</div>
 
