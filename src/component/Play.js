@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "./Modal";
 
 function Play({ set }) {
+	const [isOpen, setIsOpen] = useState(false);
+
 	return (
 		<div className="play">
 			<div className="play-container">
@@ -22,9 +25,11 @@ function Play({ set }) {
 					<img src="/images/icon-lizard.svg" alt="lizard" />
 				</div>
 			</div>
-			<div className="rules">
+			<div className="rule" onClick={() => setIsOpen(true)}>
 				<p>RULES</p>
 			</div>
+
+			<Modal open={isOpen} onClose={() => setIsOpen(false)} />
 		</div>
 	);
 }
