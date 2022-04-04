@@ -12,8 +12,9 @@ function App() {
 		setPlayerChoice(choice);
 	};
 
-	const updatePoint = () => {
-		setPoints((prev) => prev + 1);
+	const updatePoint = (condition) => {
+		console.log("👋 condition ------>", condition);
+		condition ? setPoints((prev) => prev + 1) : setPoints((prev) => prev - 1);
 	};
 
 	return (
