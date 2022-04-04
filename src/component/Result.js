@@ -8,11 +8,9 @@ function Result({ playerChoice, setPlayerChoice, updatePoint }) {
 		const choices = ["rock", "paper", "scissors", "spock", "lizard"];
 		const pick = Math.floor(Math.random() * 100) % 5;
 		setHouseChoice(choices[pick]);
-		console.log("👋 house choice are set ------>");
 	}, []);
 
 	const rules = useMemo(() => {
-		console.log("👋 rules set ------>");
 		return [
 			{
 				choice: "rock",
@@ -39,7 +37,6 @@ function Result({ playerChoice, setPlayerChoice, updatePoint }) {
 
 	useEffect(() => {
 		let playerPicked = rules.find((pick) => pick.choice === playerChoice);
-		console.log("👋 playerPicked ------>", playerPicked, houseChoice);
 		if (playerChoice === houseChoice) {
 			setStatus("Tie");
 		} else if (playerPicked.beats.includes(houseChoice)) {
