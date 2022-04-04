@@ -2,9 +2,9 @@
 
 ![Design preview for the Rock, Paper, Scissors coding challenge](./design/design.png)
 
-Deployed site: [Rock Paper Scissors](https://rock-paper-scissors-lizard-spock-five.vercel.app/)
-
 ## Welcome! 👋
+
+### Deployed site: [Rock Paper Scissors](https://rock-paper-scissors-lizard-spock-five.vercel.app/)
 
 ### Rules
 
