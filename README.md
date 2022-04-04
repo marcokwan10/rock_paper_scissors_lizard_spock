@@ -1,4 +1,4 @@
-# Frontend Mentor - Rock, Paper, Scissors
+# Rock, Paper, Scissors, Lizard, Spock
 
 ![Design preview for the Rock, Paper, Scissors coding challenge](./design/design.png)
 
