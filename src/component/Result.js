@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 function Result({ playerChoice, setPlayerChoice, updatePoint }) {
 	const [houseChoice, setHouseChoice] = useState(null);
@@ -11,10 +11,42 @@ function Result({ playerChoice, setPlayerChoice, updatePoint }) {
 		console.log("👋 house choice are set ------>");
 	}, []);
 
+	const rules = useMemo(() => {
+		console.log("👋 rules set ------>");
+		return [
+			{
+				choice: "rock",
+				beats: ["lizard", "scissors"],
+			},
+			{
+				choice: "paper",
+				beats: ["rock", "spock"],
+			},
+			{
+				choice: "scissors",
+				beats: ["lizard", "paper"],
+			},
+			{
+				choice: "lizard",
+				beats: ["spock", "paper"],
+			},
+			{
+				choice: "spock",
+				beats: ["scissors", "rock"],
+			},
+		];
+	}, []);
+
 	useEffect(() => {
-		console.log("👋 set game status ------>");
+		let playerPicked = rules.find((pick) => pick.choice === playerChoice);
+		console.log("👋 playerPicked ------>", playerPicked, houseChoice);
 		if (playerChoice === houseChoice) {
 			setStatus("Tie");
+		} else if (playerPicked.beats.includes(houseChoice)) {
+			setStatus("YOU WIN");
+			updatePoint();
+		} else {
+			setStatus("YOU LOSE");
 		}
 	}, [houseChoice]);
 
